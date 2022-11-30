@@ -19,7 +19,7 @@ void studentmanage();
 void deletebook();
 void updatebook();
 
-void addrecordrecord();
+void addrecord();
 void searchrecord();
 void displayrecord();
 void deleterecord();
@@ -160,7 +160,7 @@ void deleterecord()
 {
 	FILE *fp1,*fp2;
 	fp1=fopen("studentdata.dat","r+");
-	fp2=fopen("copy2.dat","a+");
+	fp2=fopen("copy2.dat","w+");
 	if(fp1==NULL)
 	{
 		printf("Error in opening a file.");
@@ -189,7 +189,7 @@ void updaterecord()
 {
 	FILE *fp1,*fp2;
 	fp1=fopen("studentdata.dat","r+");
-	fp2=fopen("copy2.dat","a+");
+	fp2=fopen("copy2.dat","w+");
 	if(fp1==NULL)
 	{
 		printf("Error in opening a file.");
@@ -234,7 +234,7 @@ void updatebook()
 {
 	FILE *fp1,*fp2;
 	fp1=fopen("bookdata.dat","r+");
-	fp2=fopen("copy.dat","a+");
+	fp2=fopen("copy.dat","w+");
 	if(fp1==NULL)
 	{
 		printf("Error in opening a file.");
